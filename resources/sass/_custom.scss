@@ -1,0 +1,84 @@
+// font-family: 'Poppins', sans-serif;
+// font-family: 'Roboto', sans-serif;
+// font-family: "Nunito", sans-serif !important;
+html,
+body {
+    background-color: #fff;
+    color: #636b6f !important;
+    font-family: "Nunito", sans-serif !important;
+    font-weight: 200 !important;
+    height: 100vh;
+    margin: 0;
+}
+p,
+h5,
+h4,
+td {
+    font-family: "Poppins", sans-serif !important;
+    font-weight: 500;
+}
+.full-height {
+    height: 100vh;
+}
+.flex-center {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+.table-patient {
+    max-height: 70vh !important;
+}
+th {
+    background: white;
+    position: sticky;
+    top: 0; /* Don't forget this, required for the stickiness */
+    box-shadow: 0 2px 2px -1px rgba(0, 0, 0, 0.4);
+}
+
+.position-ref {
+    position: relative;
+}
+.fa {
+    color: #fff !important;
+}
+
+.patient {
+    padding: 20px 30px;
+    background: #141414;
+}
+.top-right {
+    position: absolute;
+    right: 10px;
+    top: 18px;
+}
+
+.content {
+    text-align: center;
+}
+
+.title {
+    font-size: 84px;
+}
+
+.links > a {
+    color: #636b6f;
+    padding: 0 25px;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.1rem;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.m-b-md {
+    margin-bottom: 30px;
+}
+.typewrite,
+.typewrite:hover {
+    text-decoration: none;
+    cursor: pointer;
+}
+* {
+    color: #636b6f;
+    text-decoration: none;
+}
