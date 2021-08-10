@@ -42,15 +42,15 @@
               </form>
               <table class="table my-2">
                 @if (count($testProfiles) > 0)
-                @foreach ($testProfiles as $testProfile)
                 <tr>
-                  <td>{{$testProfile->name}}</td>
-                </tr>
-                @endforeach
+                  @foreach ($testProfiles as $testProfile)
+                    <td>{{$testProfile->name}}</td>
+                  @endforeach
                 @else 
-                <tr>No Test Profile</tr>
+                  <td>No Test Profile</td>
                 @endif
                 {{ $testProfiles->links() }}
+                </tr>
               </table>
             </div>
           </div>

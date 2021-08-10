@@ -20,4 +20,13 @@ class TestProfileController extends Controller
         $testProfile->save();
 		return redirect('testProfile')->with('success', 'Test Profile Created Created');
     }
+    public function show($id)
+    {   
+        $testProfile = TestProfile::find($id);
+        if($testProfile){
+            return view("test_profiles.show", array('testProfile' => $testProfile));
+        }else{
+            
+        }
+    }
 }

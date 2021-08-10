@@ -27,4 +27,13 @@ class TestsController extends Controller
         $test->save();
 		return redirect('test')->with('success', 'Test Created!');
     }
+    public function show($id)
+    {   
+        $test = Test::find($id);
+        if($test){
+            return view("tests.show", array('test' => $test));
+        }else{
+            
+        }
+    }
 }

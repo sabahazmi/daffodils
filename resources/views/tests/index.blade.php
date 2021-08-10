@@ -13,13 +13,14 @@
 <div class="container">
   <div class="row justify-content-center">
     <div class="col-md-12">
+    <h2><kbd>Add Test</kbd></h2>
       {{-- <a href="{{ route('patients.create')}}" class="btn btn-primary"><i class="fa fa-eye"></i></a> --}}
       <form method="POST" action="{{ route('test.store') }}">
         @csrf
         <div class="form-group row">
           <label for="gender" class="col-md-4 col-form-label text-md-right">{{ __('Test Profile') }}</label>
           <div class="col-md-6">
-            <select class="custom-select" name="test_profile_id">
+            <select class="custom-select" name="test_profile_id" autofocus>
               @foreach ($testProfiles as $testProfile)
               <option value="{{$testProfile->id}}">{{$testProfile->name}}</option>
               @endforeach
@@ -29,7 +30,7 @@
         <div class="form-group row">
           <label for="name" class="col-md-4 col-form-label text-md-right">{{ __('Test Name') }}</label>
           <div class="col-md-6">
-            <input id="name" type="text" class="form-control @error('name') is-invalid @enderror" name="name" value="{{ old('name') }}" required autocomplete="name" autofocus>
+            <input id="name" type="text" class="form-control @error('name') is-invalid @enderror" name="name" value="{{ old('name') }}" required autocomplete="name">
             @error('name')
             <span class="invalid-feedback" role="alert">
             <strong>{{ $message }}</strong>
@@ -40,7 +41,7 @@
         <div class="form-group row">
           <label for="name" class="col-md-4 col-form-label text-md-right">{{ __('Reference Value') }}</label>
           <div class="col-md-6">
-            <input id="name" type="text" class="form-control @error('reference_value') is-invalid @enderror" name="reference_value" value="{{ old('name') }}" required autocomplete="name" autofocus>
+            <input id="name" type="text" class="form-control @error('reference_value') is-invalid @enderror" name="reference_value" value="{{ old('name') }}" required autocomplete="name">
             @error('name')
             <span class="invalid-feedback" role="alert">
             <strong>{{ $message }}</strong>
@@ -60,10 +61,10 @@
         <table class="table">
           @if (count($testProfiles) > 0)
           @foreach ($testProfiles as $testProfile)
-          <ul>
-            <h4>{{$testProfile->name}}</h4>
+          <ul class="bg-light br-1 mr-4">
+            <h4><a href="testProfile/{{$testProfile->id}}">{{$testProfile->name}}</a></h4>
             @foreach ($testProfile->tests as $test)
-              <li>{{$test->name}}</li>
+              <li><a href="test/{{$test->id}}">{{$test->name}}</a></li>
             @endforeach
           </ul>
             @endforeach
