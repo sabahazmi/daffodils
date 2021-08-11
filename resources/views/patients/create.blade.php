@@ -89,7 +89,12 @@
                                 <textarea id="address" class="form-control" name="address" required autocomplete="address"></textarea>
                             </div>
                         </div>
-
+                        <div class="form-group row">
+                            <label for="aadhaar" class="col-md-4 col-form-label text-md-right">{{ __('Aadhaar') }}</label>
+                            <div class="col-md-6">
+                            <input id="aadhaar" type="text" class="form-control" name="aadhaar" required autocomplete="aadhaar">
+                            </div>
+                        </div>
                         <div class="form-group row mb-0">
                             <div class="col-md-6 offset-md-4">
                                 <button type="submit" class="btn btn-primary">

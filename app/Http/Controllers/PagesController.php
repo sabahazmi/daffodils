@@ -9,10 +9,8 @@ use Illuminate\Http\Request;
 class PagesController extends Controller
 {
     public function index()
-    {
-    
-       $testProfiles = TestProfile::all();
-        return view('pages.index')->with('testProfiles', $testProfiles);
+    {    
+        return view('auth.login');
     }
 
     public function about()

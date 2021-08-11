@@ -18,7 +18,7 @@
 Auth::routes();
 
 Route::get('/', 'PagesController@index')->name('index');
-Route::get('/home', 'PagesController@index')->name('index');
+Route::get('/home', 'PatientsController@index')->name('index');
 Route::get('/about', 'PagesController@about')->name('about');
 Route::get('/contact', 'PagesController@contact')->name('contact');
 // Route::get('/test', 'TestsController@index')->name('test');

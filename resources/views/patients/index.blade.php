@@ -109,15 +109,21 @@
             </div>
           </div>
           <div class="form-group row">
-            <label for="email" class="col-md-4 col-form-label text-md-right">{{ __('email') }}</label>
+            <label for="email" class="col-md-4 col-form-label text-md-right">{{ __('Email') }}</label>
             <div class="col-md-6">
               <input id="email" type="email" class="form-control" name="email" required autocomplete="email">
             </div>
           </div>
           <div class="form-group row">
-            <label for="address" class="col-md-4 col-form-label text-md-right">{{ __('address') }}</label>
+            <label for="address" class="col-md-4 col-form-label text-md-right">{{ __('Address') }}</label>
             <div class="col-md-6">
               <textarea id="address" class="form-control" name="address" required autocomplete="address"></textarea>
+            </div>
+          </div>
+          <div class="form-group row">
+            <label for="aadhaar" class="col-md-4 col-form-label text-md-right">{{ __('Aadhaar') }}</label>
+            <div class="col-md-6">
+              <input id="aadhaar" type="text" class="form-control" name="aadhaar" required autocomplete="aadhaar">
             </div>
           </div>
           <div class="form-group row mb-0">

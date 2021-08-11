@@ -62,9 +62,9 @@
               <li class="nav-item">
                 <a class="nav-link" href="/patients">Patients</a>
               </li>
-              <a id="navbarDropdown" class="nav-link text-danger" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+              <kbd><a id="navbarDropdown" class="nav-link text-white font-weight-bold text-uppercase" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
               {{ Auth::user()->name }} <span class="caret"></span>
-              </a>
+              </a></kbd>
               <li class="nav-item"><a class="nav-link" href="{{ route('logout') }}"
                 onclick="event.preventDefault();
                 document.getElementById('logout-form').submit();">

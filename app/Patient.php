@@ -8,7 +8,7 @@ class Patient extends Model
 {
     protected $table = 'patients';
     protected $fillable = [
-        'name', 'mobile', 'gender', 'age',
+        'name', 'mobile', 'gender', 'age', 'aadhaar',
     ];
     public function reports()
     {

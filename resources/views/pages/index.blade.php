@@ -5,24 +5,18 @@
     <div class="content">
             <div class="col-md-12">    
                 <div class="card">
-                    <div class="card-header">
-                    <h3>Patients</h4>
-                    </div>
                   <div class="card-body">
                     <div class="row my-2">
                       <table class="table text-left">
-                        @if (count($testProfiles) > 0)
-                        @foreach ($testProfiles as $testProfile)
-                        <ul>
-                          <h4>{{$testProfile->name}}</h4>
-                          @foreach ($testProfile->tests as $test)
-                            <li>{{$test->name}}</li>
+                        @if (count($patients) > 0)
+                          @foreach ($patients as $patients)
+                          <ul>
+                            <h4>{{$patients->name}}</h4>
+                          </ul>
                           @endforeach
-                        </ul>
-                          @endforeach
-                          @else 
-                          <p>No Test Profile</p>
-                          @endif
+                        @else 
+                          <p>No Patient.</p>
+                         @endif
                       </table>
                   </div>
 

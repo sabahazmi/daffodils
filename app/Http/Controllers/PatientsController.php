@@ -62,6 +62,7 @@ class PatientsController extends Controller
         $patient->age_count = $request->input('age_count');
         $patient->email = $request->input('email');
         $patient->address = $request->input('address');
+        $patient->aadhaar = $request->input('aadhaar');
         $patient->save();
         return redirect('patients')->with('success', 'Patient Created');
     }
